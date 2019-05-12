@@ -1,19 +1,26 @@
-$("li").click(function(){
-	$(this).toggleClass("completed")
+//on click of an li in an ul
+//event listener placed on ul because the ul will always be there when the page loads
+//	unlike the new lis and spans 
+$("ul").on("click", "li", function(){
+	$(this).toggleClass("completed");
 });
 
-//click on x to delete todo
-$("span").click(function(event){
+//click on x (content in the span)to delete todo
+$("ul").on("click", "span", function(event){
 	//remove the parent (li) once clicked on the child (span-X)
 	$(this).parent().fadeOut(500, function(){
 		//the this below refers to the .parent which is the whole li.
 		$(this).remove();
 		});
+	//prevents bubbling up the chain event
 	event.stopPropagation();
 });
 
 $("input[type='text']").keypress(function(event){
 	if(event.which === 13){
-		console.log("enter");
+	var todoText = $(this).val()
+	$(this).val("");
+	$("ul").append("<li><span> X </span> "+ todoText +"</li>");
+
 	}
 });
