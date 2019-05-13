@@ -1,29 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  
-  <meta charset="utf-8"/>
-  <title>To Do List </title>
-  	
-  <link rel="stylesheet" type="text/css" href="Assets\CSS\todoStyle.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">-->
- <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <meta charset="utf-8"/>
+    <title>To Do List </title>	
+    <link rel="stylesheet" type="text/css" href="Assets\CSS\toDoStyle.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
 </head>
-
 
 <body>
 <div id="container">
-  <h1> To-Do List <i class="fas fa-minus"></i> </h1>
-  <input type="text" placeholder="Enter a To-Do">
-  
+  <h1> To-Do List<span id="toggle-input"><i class="fas fa-minus"></i></span></h1>
+  <input type="text" placeholder="Enter a To-Do"> 
   <ul>
-    <li><span> <!-- <i class="fas fa-trash"></i>--> X </span>mow the lawn </li>
-    <li><span> <!-- <i class="fas fa-trash"></i>  --> X </span>do the dishes</li>
-    
+    <li><span> <i class="fas fa-trash"></i> </span> Mow the lawn </li>
+    <li><span> <i class="fas fa-trash"></i> </span> Do the dishes</li>
   </ul>
 </div>
 
-<script type="text/javascript" src="Assets\JS\todoScript.js"></script>
+<script type="text/javascript" src="Assets\JS\toDoScript.js"></script>
 </body>
 </html>
