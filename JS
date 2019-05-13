@@ -1,4 +1,4 @@
-//on click of an li in an ul
+  //on click of an li in an ul
 //event listener placed on ul because the ul will always be there when the page loads
 //	unlike the new lis and spans 
 $("ul").on("click", "li", function(){
@@ -12,17 +12,19 @@ $("ul").on("click", "span", function(event){
 		//the this below refers to the .parent which is the whole li.
 		$(this).remove();
 		});
-	//prevents bubbling up the chain event
-	//event.stopPropagation();
 });
 //clear entry and add new input to ul
 $("input[type='text']").keypress(function(event){
 	if(event.which === 13){
 	var todoText = $(this).val();
 	$(this).val("");
-	$("ul").prepend("<li><span><i class='fas fa-minus'></i></span> "+ todoText +"</li>");
+	$("ul").prepend("<li><span> <i class='fas fa-trash'></i></span> "+ todoText +"</li>");
 
 	}
+});
+
+$("#toggle-input").click(function(){
+	$("input[type='text']").fadeToggle();
 });
 
 
