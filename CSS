@@ -55,7 +55,7 @@ input:focus{
 	outline: none;
 }
 
-span {
+li span {
 	background: #e74c3c;
 	height: 35px;
 	margin-right: 20px;
@@ -76,14 +76,10 @@ span {
 	width: 360px;
 	margin: 100px auto; /*top/bottom = 0 left/right = auto */
 	box-shadow: 0 0 3px rbga(0, 0, 0, 0.3);
-	background: #f7f7f7;
+    background: #f7f7f7; 
 }
 
 .fa-minus{
-	float: right;
+    float: right;
+    color: white;
 }
-.fa-trash{
-	width: 0px;	
-}
-
-
