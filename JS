@@ -5,7 +5,7 @@ $("ul").on("click", "li", function(){
 	$(this).toggleClass("completed");
 });
 
-//click on x (content in the span)to delete todo
+//click on x (content in the span) to delete todo
 $("ul").on("click", "span", function(event){
 	//remove the parent (li) once clicked on the child (span-X)
 	$(this).parent().fadeOut(500, function(){
@@ -13,14 +13,17 @@ $("ul").on("click", "span", function(event){
 		$(this).remove();
 		});
 	//prevents bubbling up the chain event
-	event.stopPropagation();
+	//event.stopPropagation();
 });
-
+//clear entry and add new input to ul
 $("input[type='text']").keypress(function(event){
 	if(event.which === 13){
-	var todoText = $(this).val()
+	var todoText = $(this).val();
 	$(this).val("");
-	$("ul").append("<li><span> X </span> "+ todoText +"</li>");
+	$("ul").prepend("<li><span><i class='fas fa-minus'></i></span> "+ todoText +"</li>");
 
 	}
 });
+
+
+
