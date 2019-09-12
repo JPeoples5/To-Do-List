@@ -26,6 +26,37 @@ $("input[type='text']").keypress(function(event){
 $("#toggle-input").click(function(){
 	$("input[type='text']").fadeToggle();
 });
+//////////////////////////////////////////////////////////////////////////////////
+const taskList = document.getElementById("taskList");
+var input = document.getElementById("input");
+var xBtn = document.querySelector(".deleteTask");
+var ul = document.querySelector("ul");
+var li = document.querySelector("li");
+var ulChildren = document.getElementById("taskList");
 
+//toggle completed class for hard coded ex
+for(var i =0; i <ulChildren.length; i++){
+	ulChildren[i].addEventListener("click", function()){
+		this.classList.toggle("completed");
+	});
+}
+
+//Enter a task on enter press | give attributes | clear input field
+input.addEventListener('keypress', function(event){
+	if(input.value !== ""){
+		if(event.keyCode == 13 {
+			var li = document.createElement("li");
+			li.setAttribute("class", "li");
+			li.setAttribute("onclick", "this.classList.toggle('completed')");
+			xBtn.setAttribute("class", "deleteTask");
+			li.innerHTML = input.value + '<span class="deleteTask">X</span>';
+			taskList.appendChild(li);
+			input.value = "";
+			var lis = taskList.getElementsByClassName("li");
+		}
+	}
+});
+
+//delete a Task 
 
 
